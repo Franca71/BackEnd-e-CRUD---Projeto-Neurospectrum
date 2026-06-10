@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de Crianças Autistas</title>
+</head>
+<body>
+
+    <h1>Instituto de Crianças Autistas</h1>
+
+    <!-- PROFISSIONAL -->
+    <h2>Cadastro de Profissional</h2>
+
+    <input type="text" id="nomeProf" placeholder="Nome"><br><br>
+
+    <input type="text" id="especialidade" placeholder="Especialidade"><br><br>
+
+    <input type="text" id="cpfProf" placeholder="CPF"><br><br>
+
+    <input type="text" id="telefoneProf" placeholder="Telefone"><br><br>
+
+    <input type="email" id="emailProf" placeholder="Email"><br><br>
+
+    <input type="password" id="senhaProf" placeholder="Senha"><br><br>
+
+    <button onclick="cadastrarProfissional()">
+        Cadastrar Profissional
+    </button>
+
+    <hr>
+
+    <!-- SECRETÁRIA -->
+    <h2>Cadastro de Secretária</h2>
+
+    <input type="text" id="nomeSec" placeholder="Nome"><br><br>
+
+    <input type="email" id="emailSec" placeholder="Email"><br><br>
+
+    <input type="text" id="telefoneSec" placeholder="Telefone"><br><br>
+
+    <input type="password" id="senhaSec" placeholder="Senha"><br><br>
+
+    <input type="text" id="cpfSec" placeholder="CPF"><br><br>
+
+    <button onclick="cadastrarSecretaria()">
+        Cadastrar Secretária
+    </button>
+
+    <hr>
+
+    <!-- PACIENTE -->
+    <h2>Cadastro de Paciente</h2>
+
+    <input type="text" id="nomePaciente" placeholder="Nome"><br><br>
+
+    <input type="text" id="cpfPaciente" placeholder="CPF"><br><br>
+
+    <input type="date" id="dataNascimento"><br><br>
+
+    <input type="text" id="diagnostico" placeholder="Diagnóstico"><br><br>
+
+    <input type="text" id="responsavel" placeholder="Responsável"><br><br>
+
+    <input type="text" id="telefonePaciente" placeholder="Telefone"><br><br>
+
+    <button onclick="cadastrarPaciente()">
+        Cadastrar Paciente
+    </button>
+
+    <hr>
+
+    <!-- DISPONIBILIDADE -->
+    <h2>Cadastro de Disponibilidade</h2>
+
+    <input type="text" id="dia" placeholder="Dia da Semana"><br><br>
+
+    <input type="time" id="inicio"><br><br>
+
+    <input type="time" id="fim"><br><br>
+
+    <button onclick="cadastrarDisponibilidade()">
+        Cadastrar Disponibilidade
+    </button>
+
+    <hr>
+
+    <h2>Dados Cadastrados</h2>
+
+    <pre id="resultado"></pre>
+
+    <script src="script.js"></script>
+
+</body>
+</html>   
