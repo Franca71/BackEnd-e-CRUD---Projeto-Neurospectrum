@@ -6,13 +6,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Ligação à base de dados MySQL (Aiven) usando as variáveis de ambiente do Render
+// Ligação à base de dados MySQL (Aiven) com SSL ativado
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  host: process.env.DB_HOST ? process.env.DB_HOST.trim() : '',
+  port: process.env.DB_PORT ? process.env.DB_PORT.trim() : 28697,
+  user: process.env.DB_USER ? process.env.DB_USER.trim() : '',
+  password: process.env.DB_PASSWORD ? process.env.DB_PASSWORD.trim() : '',
+  database: process.env.DB_NAME ? process.env.DB_NAME.trim() : '',
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 db.connect((err) => {
